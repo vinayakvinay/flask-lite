@@ -1,10 +1,15 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from flask_wtf import CsrfProtect
+from flask_compress import Compress
+
 from server.config import Config
 
 db = SQLAlchemy()
 ma = Marshmallow()
+csrf = CsrfProtect()
+compress = Compress()
 
 
 def create_app(config_class=Config):
@@ -13,6 +18,8 @@ def create_app(config_class=Config):
 
     db.init_app(app)
     ma.init_app(app)
+    csrf.init_app(app)
+    compress.init_app(app)
 
     from server.client.routes import client
     from server.invoice.routes import invoice
