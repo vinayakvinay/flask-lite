@@ -30,6 +30,7 @@ Werkzeug = "==0.15.4"
 flask-wtf = "*"
 flask-compress = "*"
 flask-cors = "*"
+flask-talisman = "*"
 
 [requires]
 python_version = "3.6"
