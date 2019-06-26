@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_wtf import CsrfProtect
 from flask_compress import Compress
+from flask_cors import CORS
 
 from server.config import Config
 
@@ -10,6 +11,7 @@ db = SQLAlchemy()
 ma = Marshmallow()
 csrf = CsrfProtect()
 compress = Compress()
+cors = CORS()
 
 
 def create_app(config_class=Config):
@@ -20,6 +22,7 @@ def create_app(config_class=Config):
     ma.init_app(app)
     csrf.init_app(app)
     compress.init_app(app)
+    cors.init_app(app)
 
     from server.client.routes import client
     from server.invoice.routes import invoice
