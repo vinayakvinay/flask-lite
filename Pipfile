@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 yapf = "*"
+python-githooks = "*"
 
 [packages]
 marshmallow-sqlalchemy = "==0.17.0"
