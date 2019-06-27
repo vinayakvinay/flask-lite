@@ -7,6 +7,9 @@ from flask_compress import Compress
 
 from server.config import Config
 
+
+
+
 db = SQLAlchemy()
 ma = Marshmallow()
 csrf = CsrfProtect()
