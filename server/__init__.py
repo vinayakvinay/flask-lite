@@ -1,20 +1,15 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
-from flask_wtf import CsrfProtect
+from flask_wtf import CSRFProtect
 from flask_cors import CORS
 from flask_compress import Compress
 
 from server.config import Config
 
-
-
-
-
-
 db = SQLAlchemy()
 ma = Marshmallow()
-csrf = CsrfProtect()
+csrf = CSRFProtect()
 cors = CORS()
 compress = Compress()
 
