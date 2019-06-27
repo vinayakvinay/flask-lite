@@ -24,6 +24,7 @@ def create_app(config_class=Config):
     cors.init_app(app)
     compress.init_app(app)
 
+    # Blueprints
     from server.client.routes import client
     from server.invoice.routes import invoice
     from server.payment_history.routes import payment_history
