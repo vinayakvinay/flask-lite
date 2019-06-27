@@ -10,6 +10,8 @@ from server.config import Config
 
 
 
+
+
 db = SQLAlchemy()
 ma = Marshmallow()
 csrf = CsrfProtect()
